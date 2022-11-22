@@ -4,6 +4,9 @@
     <loc>https://massimoaria.github.io/openalexR/404.html</loc>
   </url>
   <url>
+    <loc>https://massimoaria.github.io/openalexR/CONTRIBUTING.html</loc>
+  </url>
+  <url>
     <loc>https://massimoaria.github.io/openalexR/LICENSE-text.html</loc>
   </url>
   <url>
@@ -11,6 +14,9 @@
   </url>
   <url>
     <loc>https://massimoaria.github.io/openalexR/articles/About-the-tibble-output.html</loc>
+  </url>
+  <url>
+    <loc>https://massimoaria.github.io/openalexR/articles/Filters.html</loc>
   </url>
   <url>
     <loc>https://massimoaria.github.io/openalexR/articles/index.html</loc>
@@ -28,7 +34,13 @@
     <loc>https://massimoaria.github.io/openalexR/news/index.html</loc>
   </url>
   <url>
+    <loc>https://massimoaria.github.io/openalexR/reference/authors2df.html</loc>
+  </url>
+  <url>
     <loc>https://massimoaria.github.io/openalexR/reference/concept_abbrev.html</loc>
+  </url>
+  <url>
+    <loc>https://massimoaria.github.io/openalexR/reference/concepts2df.html</loc>
   </url>
   <url>
     <loc>https://massimoaria.github.io/openalexR/reference/countrycode.html</loc>
@@ -37,25 +49,13 @@
     <loc>https://massimoaria.github.io/openalexR/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://massimoaria.github.io/openalexR/reference/institutions2df.html</loc>
+  </url>
+  <url>
     <loc>https://massimoaria.github.io/openalexR/reference/oa2bibliometrix.html</loc>
   </url>
   <url>
     <loc>https://massimoaria.github.io/openalexR/reference/oa2df.html</loc>
-  </url>
-  <url>
-    <loc>https://massimoaria.github.io/openalexR/reference/oaAuthors2df.html</loc>
-  </url>
-  <url>
-    <loc>https://massimoaria.github.io/openalexR/reference/oaConcepts2df.html</loc>
-  </url>
-  <url>
-    <loc>https://massimoaria.github.io/openalexR/reference/oaInstitutions2df.html</loc>
-  </url>
-  <url>
-    <loc>https://massimoaria.github.io/openalexR/reference/oaVenues2df.html</loc>
-  </url>
-  <url>
-    <loc>https://massimoaria.github.io/openalexR/reference/oaWorks2df.html</loc>
   </url>
   <url>
     <loc>https://massimoaria.github.io/openalexR/reference/oa_entities.html</loc>
@@ -83,5 +83,14 @@
   </url>
   <url>
     <loc>https://massimoaria.github.io/openalexR/reference/show_works.html</loc>
+  </url>
+  <url>
+    <loc>https://massimoaria.github.io/openalexR/reference/snowball2df.html</loc>
+  </url>
+  <url>
+    <loc>https://massimoaria.github.io/openalexR/reference/venues2df.html</loc>
+  </url>
+  <url>
+    <loc>https://massimoaria.github.io/openalexR/reference/works2df.html</loc>
   </url>
 </urlset>

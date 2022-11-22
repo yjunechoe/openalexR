@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">openalexR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,6 +26,7 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/A_Brief_Introduction_to_openalexR.html">A Brief Introduction to openalexR</a>
     <a class="dropdown-item" href="../articles/About-the-tibble-output.html">About the tibble output</a>
+    <a class="dropdown-item" href="../articles/Filters.html">Filters</a>
     <a class="dropdown-item" href="../articles/institution.html">Transition towards Open Access</a>
   </div>
 </li>
@@ -49,7 +50,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>oa_fetch but for a random query</h1>
-      <small class="dont-index">Source: <a href="https://github.com/massimoaria/openalexR/blob/HEAD/R/oaApiRequest.R" class="external-link"><code>R/oaApiRequest.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/massimoaria/openalexR/blob/HEAD/R/oa_fetch.R" class="external-link"><code>R/oa_fetch.R</code></a></small>
       <div class="d-none name"><code>oa_random.Rd</code></div>
     </div>
 
@@ -69,7 +70,7 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>entity</dt>
-<dd><p>Character. It indicates the scholarly entity of the search.
+<dd><p>Character. Scholarly entity of the search.
 The argument can be one of c("works", "authors", "venues", "institutions", "concepts").
 If not provided, `entity` is guessed from `identifier`.</p></dd>
 
@@ -79,7 +80,8 @@ If not provided, `entity` is guessed from `identifier`.</p></dd>
 
 
 <dt>endpoint</dt>
-<dd><p>is character. It indicates the url of the OpenAlex Endpoint API server. The default value is endpoint = "https://api.openalex.org/".</p></dd>
+<dd><p>Character. URL of the OpenAlex Endpoint API server.
+Defaults to endpoint = "https://api.openalex.org/".</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -93,16 +95,17 @@ Result of the random query.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">oa_random</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 26</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 28</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   id        displ…¹ author ab    publi…² relev…³ so    so_id publi…⁴ issn  url  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;lis&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> https://… Patter… &lt;df&gt;   Abst… 1985-1… <span style="color: #BB0000;">NA</span>      Agri… http… Elsevi… &lt;chr&gt; http…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 15 more variables: first_page &lt;chr&gt;, last_page &lt;chr&gt;, volume &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   issue &lt;chr&gt;, is_oa &lt;lgl&gt;, cited_by_count &lt;int&gt;, counts_by_year &lt;list&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   publication_year &lt;int&gt;, cited_by_api_url &lt;chr&gt;, ids &lt;list&gt;, doi &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   type &lt;chr&gt;, referenced_works &lt;list&gt;, related_works &lt;list&gt;, concepts &lt;list&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   and abbreviated variable names ¹​display_name, ²​publication_date,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ³​relevance_score, ⁴​publisher</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;lis&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> https://… Protoo… &lt;df&gt;   Opis… 2002-0… <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>      &lt;lgl&gt; <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 17 more variables: first_page &lt;lgl&gt;, last_page &lt;lgl&gt;, volume &lt;lgl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   issue &lt;lgl&gt;, is_oa &lt;lgl&gt;, cited_by_count &lt;int&gt;, counts_by_year &lt;lgl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   publication_year &lt;int&gt;, cited_by_api_url &lt;chr&gt;, ids &lt;list&gt;, doi &lt;lgl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   type &lt;lgl&gt;, referenced_works &lt;lgl&gt;, related_works &lt;list&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   is_paratext &lt;lgl&gt;, is_retracted &lt;lgl&gt;, concepts &lt;list&gt;, and abbreviated</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   variable names ¹​display_name, ²​publication_date, ³​relevance_score,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ⁴​publisher</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
