@@ -54,7 +54,7 @@ See &amp;lt;https://docs.openalex.org/api/get-n-grams&amp;gt; for coverage and m
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Get N-grams of works</h1>
-      <small class="dont-index">Source: <a href="https://github.com/massimoaria/openalexR/blob/HEAD/R/oa_ngram.R" class="external-link"><code>R/oa_ngram.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/massimoaria/openalexR/blob/HEAD/R/oa_ngrams.R" class="external-link"><code>R/oa_ngrams.R</code></a></small>
       <div class="d-none name"><code>oa_ngrams.Rd</code></div>
     </div>
 
@@ -66,7 +66,7 @@ See &lt;https://docs.openalex.org/api/get-n-grams&gt; for coverage and more tech
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">oa_ngrams</span><span class="op">(</span><span class="va">works_identifier</span>, mailto <span class="op">=</span> <span class="fu">oa_email</span><span class="op">(</span><span class="op">)</span>, verbose <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">oa_ngrams</span><span class="op">(</span><span class="va">works_identifier</span>, <span class="va">...</span>, verbose <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -76,9 +76,8 @@ See &lt;https://docs.openalex.org/api/get-n-grams&gt; for coverage and more tech
 These IDs normally start with "W". See more at &lt;https://docs.openalex.org/about-the-data/work#id&gt;.</p></dd>
 
 
-<dt>mailto</dt>
-<dd><p>Character string.
-Gives OpenAlex an email to enter the polite pool.</p></dd>
+<dt>...</dt>
+<dd><p>Unused.</p></dd>
 
 
 <dt>verbose</dt>
