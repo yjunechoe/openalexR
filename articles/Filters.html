@@ -592,8 +592,8 @@ documentation</a> from Open Alex.</p>
 <span><span class="co">#&gt; $ ancestors                  <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;data.frame[8 x 4]&gt;], [&lt;data.frame[6 x 4]…</span></span>
 <span><span class="co">#&gt; $ related_concepts           <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;data.frame[6 x 5]&gt;], [&lt;data.frame[9 x 5]&gt;…</span></span>
 <span><span class="co">#&gt; $ relevance_score            <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> NA, NA, NA</span></span>
-<span><span class="co">#&gt; $ works_count                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 955, 672, 630</span></span>
-<span><span class="co">#&gt; $ cited_by_count             <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 11078, 11498, 16900</span></span>
+<span><span class="co">#&gt; $ works_count                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 948, 675, 630</span></span>
+<span><span class="co">#&gt; $ cited_by_count             <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 10997, 11624, 16985</span></span>
 <span><span class="co">#&gt; $ counts_by_year             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;data.frame[12 x 3]&gt;], [&lt;data.frame[12 x 3…</span></span>
 <span><span class="co">#&gt; $ works_api_url              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.openalex.org/works?filter=con…</span></span>
 <span></span>
@@ -621,13 +621,13 @@ documentation</a> from Open Alex.</p>
 <span><span class="co">#&gt; $ image_url                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://upload.wikimedia.org/wikipedia/com…</span></span>
 <span><span class="co">#&gt; $ image_thumbnail_url       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://upload.wikimedia.org/wikipedia/comm…</span></span>
 <span><span class="co">#&gt; $ associated_institutions   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> NA, NA, NA, NA</span></span>
-<span><span class="co">#&gt; $ relevance_score           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 3937.6710, 863.4844, 637.8317, 306.5225</span></span>
-<span><span class="co">#&gt; $ works_count               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7934, 1054, 526, 646</span></span>
-<span><span class="co">#&gt; $ cited_by_count            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 257642, 10373, 3808, 1287</span></span>
+<span><span class="co">#&gt; $ relevance_score           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 3929.0117, 859.9650, 635.6691, 306.7255</span></span>
+<span><span class="co">#&gt; $ works_count               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7948, 1054, 526, 649</span></span>
+<span><span class="co">#&gt; $ cited_by_count            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 259340, 10402, 3824, 1303</span></span>
 <span><span class="co">#&gt; $ counts_by_year            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;data.frame[12 x 3]&gt;], [&lt;data.frame[12 x 3…</span></span>
 <span><span class="co">#&gt; $ works_api_url             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.openalex.org/works?filter=insti…</span></span>
 <span><span class="co">#&gt; $ x_concepts                <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;data.frame[21 x 5]&gt;], [&lt;data.frame[17 x 5]…</span></span>
-<span><span class="co">#&gt; $ updated_date              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023-01-23T16:13:37.402125", "2023-01-23T17…</span></span>
+<span><span class="co">#&gt; $ updated_date              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023-02-06T12:14:42.947668", "2023-02-05T17…</span></span>
 <span><span class="co">#&gt; $ created_date              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2018-05-17", "2016-06-24", "2016-06-24", "2…</span></span>
 <span></span>
 <span><span class="va">peer_venues</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/oa_fetch.html">oa_fetch</a></span><span class="op">(</span></span>
@@ -637,24 +637,9 @@ documentation</a> from Open Alex.</p>
 <span>  is_oa <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  is_in_doaj <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
+<span><span class="co">#&gt; One list does not contain a valid OpenAlex collection</span></span>
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">peer_venues</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 1</span></span>
-<span><span class="co">#&gt; Columns: 15</span></span>
-<span><span class="co">#&gt; $ id              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://openalex.org/V4210220408"</span></span>
-<span><span class="co">#&gt; $ display_name    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "PeerJ physical chemistry"</span></span>
-<span><span class="co">#&gt; $ publisher       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "PeerJ"</span></span>
-<span><span class="co">#&gt; $ issn            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "2689-7733"</span></span>
-<span><span class="co">#&gt; $ issn_l          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "2689-7733"</span></span>
-<span><span class="co">#&gt; $ is_oa           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span></span>
-<span><span class="co">#&gt; $ is_in_doaj      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span></span>
-<span><span class="co">#&gt; $ ids             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[5 x 2]&gt;]</span></span>
-<span><span class="co">#&gt; $ homepage_url    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://peerj.com/physical-chemistry/"</span></span>
-<span><span class="co">#&gt; $ relevance_score <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ works_count     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 19</span></span>
-<span><span class="co">#&gt; $ cited_by_count  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 88</span></span>
-<span><span class="co">#&gt; $ counts_by_year  <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;data.frame[4 x 3]&gt;]</span></span>
-<span><span class="co">#&gt; $ x_concepts      <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;data.frame[34 x 5]&gt;]</span></span>
-<span><span class="co">#&gt; $ works_api_url   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.openalex.org/works?filter=host_venue.id:V…</span></span></code></pre></div>
+<span><span class="co">#&gt;  NULL</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
