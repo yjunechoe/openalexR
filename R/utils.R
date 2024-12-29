@@ -89,7 +89,7 @@ oa_progress_seq <- function(n, pb = TRUE, text = "converting") {
   along <- seq_len(n)
   if (pb) {
     cli::cli_progress_along(
-      along, name = text,
+      x = along, name = text,
       clear = FALSE
     )
   } else {

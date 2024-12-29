@@ -239,6 +239,9 @@ works2df <- function(data, abstract = TRUE, verbose = TRUE,
     out_ls[sapply(out_ls, is.null)] <- NULL
     list_df[[i]] <- out_ls
   }
+  if (pb) {
+    cat("\r\n\r")
+  }
 
   out_df <- rbind_oa_ls(list_df)
   out_df[, intersect(col_order, names(out_df))]
