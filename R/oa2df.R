@@ -144,7 +144,7 @@ oa2df <- function(data, entity, options = NULL, count_only = FALSE, group_by = N
 #' @export
 #'
 works2df <- function(data, abstract = TRUE, verbose = TRUE,
-                     pb = if (verbose) oa_progress(length(data)) else NULL) {
+                     pb = verbose) {
   col_order <- c(
     "id", "title", "display_name", "authorships", "abstract", "doi",
     "publication_date", "publication_year", "relevance_score", "fwci",
@@ -196,9 +196,7 @@ works2df <- function(data, abstract = TRUE, verbose = TRUE,
   n <- length(data)
   list_df <- vector(mode = "list", length = n)
 
-  for (i in seq.int(n)) {
-    if (verbose) pb$tick()
-
+  for (i in oa_progress_seq(n, pb)) {
     paper <- data[[i]]
 
     fields <- works_process[works_process$field %in% names(paper), ]
