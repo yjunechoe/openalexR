@@ -1,3 +1,5 @@
+source("./R/oa_fetch.R")
+
 # concept_abbrev <- tibble::tribble(
 #                                 ~id,           ~display_name, ~abbreviation,
 #    "https://openalex.org/C41008148",      "Computer science",  "Comput Sci",
@@ -47,7 +49,8 @@ concept_abbrev <- tibble::tribble(
 oa2df_coverage <- list()
 for (entity in setdiff(oa_entities(), "concepts")) {
   oa2df_coverage[[entity]] <- readr::read_csv(
-    sprintf("data-raw/coverage-%s.csv", entity)
+    sprintf("data-raw/coverage-%s.csv", entity),
+    show_col_types = FALSE
   )
 }
 
